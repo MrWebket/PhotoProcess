@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/main_area"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/frameLayout"
+        android:orientation="vertical">
+
+        <com.shenghuoli.android.widget.PhotoProcessImageView
+            android:id="@+id/process_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center" />
+
+        <com.shenghuoli.android.widget.PhotoProessControlView
+            android:id="@+id/photo_proess_controll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/vignette_image"
+            android:layout_width="match_parent"
+            android:contentDescription="@null"
+            android:background="@mipmap/photo_process_vignette_bg"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:layout_above="@+id/bottom_ll" />
+
+    <LinearLayout
+        android:id="@+id/bottom_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ff004a"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/template_btn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="贴纸"
+            android:textColor="#d0beb9"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/filter_btn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="滤镜"
+            android:textColor="#d0beb9"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/adjustment_btn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="标签"
+            android:textColor="#d0beb9"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_gray"
+    android:orientation="vertical">
+
+    <com.hope.photoprocess.widget.HeaderLayout
+        android:id="@+id/title_rl"
+        style="@style/style_title_layout">
+
+        <ImageButton
+            style="@style/style_title_back"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@mipmap/while_back_ic"
+            android:contentDescription="@null" />
+
+        <TextView
+            style="@style/style_title_text"
+            android:layout_centerInParent="true"
+            android:text="@string/please_choose" />
+
+    </com.hope.photoprocess.widget.HeaderLayout>
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_rl"
+        android:background="@color/white"
+        android:contentDescription="@null"
+        android:horizontalSpacing="5dp"
+        android:numColumns="3"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/dp_5" />
+
+</LinearLayout>

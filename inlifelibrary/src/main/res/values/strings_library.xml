@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onClickFinish">actionFinish</string>
+    <string name="yes">确定</string>
+    <string name="cancel">取消</string>
+    
+    <string name="please_choose_file">请选择一个要上传的文件</string>
+    <string name="file_choose_faild_pormpt">请安装文件管理器</string>
+    <string name="sdcard_notExists">SDCard不存在,请检查</string>
+    
+    <string name="http_parse_fail">解析失败</string>
+</resources>

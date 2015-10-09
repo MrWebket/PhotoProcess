@@ -1,0 +1,59 @@
+<resources>
+
+    <!-- 比例  2.5 -->
+
+    <dimen name="dp_2">5dp</dimen>
+    <dimen name="dp_3">7.5dp</dimen>
+    <dimen name="dp_5">12.5dp</dimen>
+    <dimen name="dp_6">15dp</dimen>
+    <dimen name="dp_8">20dp</dimen>
+    <dimen name="dp_10">25dp</dimen>
+    <dimen name="dp_12">30dp</dimen>
+    <dimen name="dp_14">35dp</dimen>
+    <dimen name="dp_15">37.5dp</dimen>
+    <dimen name="dp_18">455dp</dimen>
+    <dimen name="dp_20">50dp</dimen>
+    <dimen name="dp_25">62.5dp</dimen>
+    <dimen name="dp_30">75dp</dimen>
+    <dimen name="dp_n30">-75dp</dimen>
+    <dimen name="dp_35">87.5dp</dimen>
+    <dimen name="dp_36">90dp</dimen>
+    <dimen name="dp_40">100dp</dimen>
+    <dimen name="dp_45">112.5dp</dimen>
+    <dimen name="dp_50">125dp</dimen>
+    <dimen name="dp_55">137.5dp</dimen>
+    <dimen name="dp_60">150dp</dimen>
+    <dimen name="dp_65">162.5dp</dimen>
+    <dimen name="dp_70">175dp</dimen>
+    <dimen name="dp_75">187.5dp</dimen>
+    <dimen name="dp_80">200dp</dimen>
+    <dimen name="dp_85">212.5dp</dimen>
+    <dimen name="dp_90">225dp</dimen>
+    <dimen name="dp_95">237.5dp</dimen>
+    <dimen name="dp_100">250dp</dimen>
+    <dimen name="dp_110">275dp</dimen>
+    <dimen name="dp_120">300dp</dimen>
+    <dimen name="dp_130">325dp</dimen>
+    <dimen name="dp_140">350dp</dimen>
+    <dimen name="dp_160">400dp</dimen>
+    <dimen name="dp_170">425dp</dimen>
+    <dimen name="dp_180">450dp</dimen>
+    <dimen name="dp_190">475dp</dimen>
+    <dimen name="dp_200">500dp</dimen>
+    <dimen name="dp_220">550dp</dimen>
+    <dimen name="dp_225">562.5dp</dimen>
+    <dimen name="dp_240">600dp</dimen>
+    <dimen name="dp_300">750dp</dimen>
+    <dimen name="title_height">112.5dp</dimen>
+    <dimen name="title_horizontal_padding">25dp</dimen>
+    <dimen name="title_vertical_padding">12.5dp</dimen>
+    <dimen name="bottom_height">137.5dp</dimen>
+    <dimen name="font_size_tiny">25.0sp</dimen>
+    <dimen name="font_size_small">32.5sp</dimen>
+    <dimen name="font_size_normal">38.75sp</dimen>
+    <dimen name="font_size_large">45.0sp</dimen>
+    <dimen name="font_size_xlarge">50.0sp</dimen>
+    <dimen name="font_size_xxlarge">55.0sp</dimen>
+    <dimen name="font_size_xxxlarge">75sp</dimen>
+
+</resources>

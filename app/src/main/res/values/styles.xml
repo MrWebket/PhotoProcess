@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="style_title_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/title_height</item>
+        <item name="android:background">@color/color_f6</item>
+    </style>
+
+    <style name="style_title_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingRight">@dimen/dp_15</item>
+        <item name="android:paddingLeft">@dimen/dp_15</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxWidth">@dimen/dp_200</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/title_color</item>
+        <item name="android:textSize">@dimen/font_size_large</item>
+    </style>
+
+    <style name="style_title_back">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:onClick">@string/onClickFinish</item>
+        <item name="android:background">@mipmap/while_back_ic</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxWidth">@dimen/dp_200</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_size_large</item>
+    </style>
+
+</resources>

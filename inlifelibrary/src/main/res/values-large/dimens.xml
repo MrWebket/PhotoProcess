@@ -1,0 +1,58 @@
+<resources>
+
+    <!-- 比例  1.5 -->
+
+    <dimen name="dp_2">3dp</dimen>
+    <dimen name="dp_3">4.5dp</dimen>
+    <dimen name="dp_5">7.5dp</dimen>
+    <dimen name="dp_6">9dp</dimen>
+    <dimen name="dp_8">12dp</dimen>
+    <dimen name="dp_10">15dp</dimen>
+    <dimen name="dp_12">18dp</dimen>
+    <dimen name="dp_14">21dp</dimen>
+    <dimen name="dp_15">22.5dp</dimen>
+    <dimen name="dp_18">27dp</dimen>
+    <dimen name="dp_20">30dp</dimen>
+    <dimen name="dp_25">37.5dp</dimen>
+    <dimen name="dp_30">45dp</dimen>
+    <dimen name="dp_n30">45dp</dimen>
+    <dimen name="dp_35">52.5dp</dimen>
+    <dimen name="dp_36">52dp</dimen>
+    <dimen name="dp_40">60dp</dimen>
+    <dimen name="dp_45">67.5dp</dimen>
+    <dimen name="dp_50">75dp</dimen>
+    <dimen name="dp_55">82.5dp</dimen>
+    <dimen name="dp_60">90dp</dimen>
+    <dimen name="dp_65">97.5dp</dimen>
+    <dimen name="dp_70">105dp</dimen>
+    <dimen name="dp_75">112.5dp</dimen>
+    <dimen name="dp_80">120dp</dimen>
+    <dimen name="dp_85">127.5dp</dimen>
+    <dimen name="dp_90">135dp</dimen>
+    <dimen name="dp_95">142.5dp</dimen>
+    <dimen name="dp_100">150dp</dimen>
+    <dimen name="dp_110">165dp</dimen>
+    <dimen name="dp_120">180dp</dimen>
+    <dimen name="dp_130">195dp</dimen>
+    <dimen name="dp_140">210dp</dimen>
+    <dimen name="dp_160">240dp</dimen>
+    <dimen name="dp_170">255dp</dimen>
+    <dimen name="dp_180">270dp</dimen>
+    <dimen name="dp_190">285dp</dimen>
+    <dimen name="dp_200">300dp</dimen>
+    <dimen name="dp_220">330dp</dimen>
+    <dimen name="dp_225">337.5dp</dimen>
+    <dimen name="dp_240">360dp</dimen>
+    <dimen name="dp_300">450dp</dimen>
+    <dimen name="title_height">67.5dp</dimen>
+
+    <dimen name="bottom_height">82.5dp</dimen>
+    <dimen name="font_size_tiny">15.0sp</dimen>
+    <dimen name="font_size_small">19.5sp</dimen>
+    <dimen name="font_size_normal">23.25sp</dimen>
+    <dimen name="font_size_large">27.0sp</dimen>
+    <dimen name="font_size_xlarge">30.0sp</dimen>
+    <dimen name="font_size_xxlarge">33.0sp</dimen>
+    <dimen name="font_size_xxxlarge">45sp</dimen>
+
+</resources>

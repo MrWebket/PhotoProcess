@@ -6,9 +6,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 
-import com.shenghuoli.android.R;
-import com.shenghuoli.android.camera.PhotoProcessBaseFragment;
-import com.shenghuoli.android.widget.HorizontalListView;
+import com.hope.photoprocess.R;
+import com.hope.photoprocess.widget.HorizontalListView;
+
 
 /**
  * 图片处理模板Fragment

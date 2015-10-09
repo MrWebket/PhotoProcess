@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.shenghuoli.android.R;
+import com.hope.photoprocess.R;
 import com.shenghuoli.library.adapter.BaseAbsAdapter;
 
 import java.util.Arrays;

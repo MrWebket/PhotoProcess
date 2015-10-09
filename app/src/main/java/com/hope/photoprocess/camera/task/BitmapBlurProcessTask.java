@@ -8,9 +8,9 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.Xfermode;
 
-import com.shenghuoli.android.app.App;
-import com.shenghuoli.android.util.FastBlur;
-import com.shenghuoli.android.widget.PhotoProessControlView;
+import com.hope.photoprocess.app.App;
+import com.hope.photoprocess.util.FastBlur;
+import com.hope.photoprocess.widget.PhotoProessControlView;
 import com.shenghuoli.library.utils.DisplayUtil;
 
 /**

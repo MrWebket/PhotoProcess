@@ -9,13 +9,12 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 
-import com.shenghuoli.android.R;
-import com.shenghuoli.android.adapter.PhotoProcessFilterAdapter;
-import com.shenghuoli.android.app.App;
-import com.shenghuoli.android.camera.GPUImageCache;
-import com.shenghuoli.android.camera.PhotoProcessBaseFragment;
-import com.shenghuoli.android.camera.entity.GPUEntity;
-import com.shenghuoli.android.widget.HorizontalListView;
+import com.hope.photoprocess.R;
+import com.hope.photoprocess.adapter.PhotoProcessFilterAdapter;
+import com.hope.photoprocess.app.App;
+import com.hope.photoprocess.cache.GPUImageCache;
+import com.hope.photoprocess.model.GPUEntity;
+import com.hope.photoprocess.widget.HorizontalListView;
 
 import java.util.Arrays;
 

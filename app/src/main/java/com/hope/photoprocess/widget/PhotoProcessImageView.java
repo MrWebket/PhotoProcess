@@ -12,7 +12,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 
-import com.shenghuoli.android.camera.delegate.PhotoProcessImageViewDelegate;
+import com.hope.photoprocess.camera.delegate.PhotoProcessImageViewDelegate;
 
 /**
  * 图片处理ImageView

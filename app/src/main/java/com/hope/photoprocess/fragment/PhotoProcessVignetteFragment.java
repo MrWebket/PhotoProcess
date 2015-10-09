@@ -6,8 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SeekBar;
 
-import com.shenghuoli.android.R;
-import com.shenghuoli.android.camera.PhotoProcessBaseFragment;
+import com.hope.photoprocess.R;
+
 
 /**
  * 暗角

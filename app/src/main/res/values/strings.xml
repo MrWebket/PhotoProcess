@@ -5,4 +5,8 @@
     <string name="cancel">取消</string>
     <string name="rotate">旋转</string>
     <string name="confirm">确定</string>
+
+    <string name="brightness">亮度</string>
+    <string name="move_center">移轴</string>
+    <string name="vignette">暗角</string>
 </resources>

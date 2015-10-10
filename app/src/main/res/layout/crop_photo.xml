@@ -27,7 +27,7 @@
                 android:scaleType="fitCenter" />
         </LinearLayout>
 
-        <com.shenghuoli.android.widget.ImageViewTouch.ImageViewTouch
+        <com.hope.photoprocess.widget.ImageViewTouch.ImageViewTouch
             android:id="@+id/crop_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

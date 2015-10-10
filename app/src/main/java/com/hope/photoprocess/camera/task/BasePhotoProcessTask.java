@@ -59,6 +59,12 @@ public abstract class BasePhotoProcessTask implements Handler.Callback {
         handler.post(new PostRunnable());
     }
 
+    public void releaseResultBitmap() {
+        if(mResultBitmap != null) {
+            mResultBitmap.recycle();
+        }
+    }
+
     public void clear() {
         if (handlerThread != null) {
             handlerThread.quit();

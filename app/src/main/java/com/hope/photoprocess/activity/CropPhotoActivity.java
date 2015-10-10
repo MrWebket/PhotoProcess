@@ -154,8 +154,6 @@ public class CropPhotoActivity extends BaseActivity implements View.OnClickListe
             rotationBitmap = adjustPhotoRotation(oriBitmap, mCurrentrRotationDegree);
 
             mTouchCropImage.setImageBitmap(rotationBitmap, m, (float) rate, 10);
-        } else {
-
         }
     }
 

@@ -13,14 +13,14 @@
         android:layout_above="@+id/frameLayout"
         android:orientation="vertical">
 
-        <com.shenghuoli.android.widget.PhotoProcessImageView
+        <com.hope.photoprocess.widget.PhotoProcessImageView
             android:id="@+id/process_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:layout_gravity="center" />
 
-        <com.shenghuoli.android.widget.PhotoProessControlView
+        <com.hope.photoprocess.widget.PhotoProessControlView
             android:id="@+id/photo_proess_controll_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -45,7 +45,7 @@
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:background="#ff004a"
+        android:background="@color/common_color"
         android:orientation="horizontal">
 
         <Button

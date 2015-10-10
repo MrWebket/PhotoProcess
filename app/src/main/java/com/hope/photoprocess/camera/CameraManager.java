@@ -57,19 +57,19 @@ public class CameraManager {
 
     public void close() {
         mInstance = null;
-        if(mBitmapLightnessTask != null) {
-            mBitmapLightnessTask.clear();
-        }
-        if(mBitmapBlurProcessTask != null) {
-            mBitmapBlurProcessTask.clear();
+
+        for (int i = 0; i < list.size(); i++) {
+            list.get(i).clear();
         }
     }
+
 
     private String getSaveSDCardFileName() {
         return System.currentTimeMillis() + ".jpg";
     }
 
     public String saveBitmapToSDCard(Context context, Bitmap bitmap) {
+
         return ImageUtil.saveBitmap(context, bitmap, ImageUtil.JPG, App.getInstance().getPhotoPath(), getSaveSDCardFileName(), true);
     }
 
@@ -77,6 +77,10 @@ public class CameraManager {
 
     public void setProcessSourceBitmap(Bitmap sourceBitmap) {
         mProcessSourceBitmap = sourceBitmap;
+
+        for (int i = 0; i < list.size(); i++) {
+            list.get(i).releaseResultBitmap();
+        }
     }
 
     /**

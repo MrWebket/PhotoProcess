@@ -68,7 +68,6 @@ public class ChoosePhotoActivity extends BaseActivity implements AdapterView.OnI
             extras.putString(CropPhotoActivity.EXTRA_FILE_PATH, filePath);
 
             startIntent(CropPhotoActivity.class, extras);
-            finish();
         }
     }
 }

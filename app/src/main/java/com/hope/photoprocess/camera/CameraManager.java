@@ -5,15 +5,10 @@ import android.graphics.Bitmap;
 
 import com.hope.photoprocess.app.App;
 import com.hope.photoprocess.camera.delegate.PhotoProcessBitmapDelegate;
-import com.hope.photoprocess.camera.task.BasePhotoProcessTask;
 import com.hope.photoprocess.camera.task.BitmapBlurProcessTask;
 import com.hope.photoprocess.camera.task.BitmapLightnessTask;
-import com.shenghuoli.library.utils.CollectionUtil;
 import com.shenghuoli.library.utils.DisplayUtil;
 import com.shenghuoli.library.utils.ImageUtil;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 相机管理类
@@ -26,11 +21,7 @@ public class CameraManager {
     private BitmapLightnessTask mBitmapLightnessTask;
     private BitmapBlurProcessTask mBitmapBlurProcessTask;
 
-    private BasePhotoProcessTask mLastExecTask;
-
     private PhotoProcessBitmapDelegate listener;
-
-    private List<BasePhotoProcessTask> list = new ArrayList<BasePhotoProcessTask>();
 
     public static CameraManager getInstance() {
         if (mInstance == null) {
@@ -57,10 +48,6 @@ public class CameraManager {
 
     public void close() {
         mInstance = null;
-
-        for (int i = 0; i < list.size(); i++) {
-            list.get(i).clear();
-        }
     }
 
 
@@ -78,9 +65,6 @@ public class CameraManager {
     public void setProcessSourceBitmap(Bitmap sourceBitmap) {
         mProcessSourceBitmap = sourceBitmap;
 
-        for (int i = 0; i < list.size(); i++) {
-            list.get(i).releaseResultBitmap();
-        }
     }
 
     /**
@@ -91,15 +75,11 @@ public class CameraManager {
     public void updateLightness(float progress) {
         if(mBitmapLightnessTask == null) {
             mBitmapLightnessTask = new BitmapLightnessTask();
-            list.add(mBitmapLightnessTask);
+
         }
         mBitmapLightnessTask.setSourceBitmap(mProcessSourceBitmap);
         mBitmapLightnessTask.setListener(listener);
         mBitmapLightnessTask.setProgress(progress);
-
-        changeTaskPointer(mBitmapLightnessTask);
-
-        mLastExecTask = mBitmapLightnessTask;
 
         mBitmapLightnessTask.execTask();
     }
@@ -107,7 +87,6 @@ public class CameraManager {
     public void updateBlur(int type, float radius,float mPercentageX, float mPercentageY, boolean isModifySourceBlur) {
         if(mBitmapBlurProcessTask == null) {
             mBitmapBlurProcessTask = new BitmapBlurProcessTask();
-            list.add(mBitmapBlurProcessTask);
         }
         mBitmapBlurProcessTask.setListener(listener);
         mBitmapBlurProcessTask.setType(type);
@@ -117,32 +96,9 @@ public class CameraManager {
         mBitmapBlurProcessTask.setPercentageY(mPercentageY);
         mBitmapBlurProcessTask.setModifySourceBlur(isModifySourceBlur);
 
-        changeTaskPointer(mBitmapBlurProcessTask);
-
-        mLastExecTask = mBitmapBlurProcessTask;
-
         mBitmapBlurProcessTask.execTask();
     }
 
-    private void changeTaskPointer(BasePhotoProcessTask currentTask) {
-        if(!CollectionUtil.isEmpty(list) && currentTask != mLastExecTask) {
-
-            for (int i = 0; i < list.size(); i++) {
-                BasePhotoProcessTask task = list.get(i);
-                if(task == currentTask && mLastExecTask != null) {
-                    task.setBaseTask(mLastExecTask);
-                    continue;
-                }
-                if(i == list.size() - 1) {
-                    task.setBaseTask(task);
-                    continue;
-                }
-                if(i < list.size() - 1) {
-                    task.setBaseTask(list.get(i + 1));
-                }
-            }
-        }
-    }
 
     public void setBitmapLightnessListener(PhotoProcessBitmapDelegate listener) {
         this.listener = listener;

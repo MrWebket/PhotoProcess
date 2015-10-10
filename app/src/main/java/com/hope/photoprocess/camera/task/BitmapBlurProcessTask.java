@@ -99,7 +99,7 @@ public class BitmapBlurProcessTask extends BasePhotoProcessTask {
     protected Bitmap doRun(Bitmap sourceBitmap) {
 
        try {
-           getmBlurBitmap(sourceBitmap);
+           getBlurBitmap(sourceBitmap);
 
            Bitmap resultBitmap = mBlurBitmap.copy(Bitmap.Config.ARGB_8888, true);
            Canvas canvas = new Canvas(resultBitmap);
@@ -145,7 +145,7 @@ public class BitmapBlurProcessTask extends BasePhotoProcessTask {
 
     }
 
-    private Bitmap getmBlurBitmap(Bitmap sourceBitmap) throws OutOfMemoryError {
+    private Bitmap getBlurBitmap(Bitmap sourceBitmap) throws OutOfMemoryError {
         if(isModifySourceBlur || mBlurBitmap == null) {
             if(sourceBitmap.getWidth() > 720 && sourceBitmap.getHeight() > 1280) {
 

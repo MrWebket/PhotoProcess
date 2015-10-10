@@ -31,16 +31,6 @@ public abstract class BasePhotoProcessTask implements Handler.Callback {
 
     private Handler handler;
 
-    private BasePhotoProcessTask mBaseTask;
-
-    private Bitmap mResultBitmap;
-
-    private Bitmap mLastBitmap;
-
-    public void setBaseTask(BasePhotoProcessTask task) {
-        this.mBaseTask = task;
-    }
-
     public BasePhotoProcessTask() {
         handlerThread = new HandlerThread("life.com");
         handlerThread.start(); // 创建HandlerThread后一定要记得start()
@@ -54,39 +44,22 @@ public abstract class BasePhotoProcessTask implements Handler.Callback {
         if(isRun) {
             return;
         }
-        mResultBitmap = null;
         isRun = true;
         handler.post(new PostRunnable());
-    }
-
-    public void releaseResultBitmap() {
-        if(mResultBitmap != null) {
-            mResultBitmap.recycle();
-        }
     }
 
     public void clear() {
         if (handlerThread != null) {
             handlerThread.quit();
         }
-        if(mLastBitmap != null) {
-            mLastBitmap.recycle();
-        }
-        if(mResultBitmap != null) {
-            mResultBitmap.recycle();
-        }
     }
+
 
     private class PostRunnable implements Runnable {
 
         @Override
         public void run() {
-            Bitmap sourceBitmap = getSourceBitmap(mLastBitmap);
-            mLastBitmap = sourceBitmap;
-
-            Bitmap resultBitmap = doRun(sourceBitmap);
-
-            sendCallback(resultBitmap);
+            sendCallback(doRun(getSourceBitmap()));
         }
     }
 
@@ -116,8 +89,7 @@ public abstract class BasePhotoProcessTask implements Handler.Callback {
                 break;
             case HANDLER_CODE_SUCC:
                 if(listener != null) {
-                    mResultBitmap = (Bitmap) msg.obj;
-                    listener.onCallback(mResultBitmap);
+                    listener.onCallback((Bitmap) msg.obj);
                 }
                 break;
         }
@@ -132,23 +104,8 @@ public abstract class BasePhotoProcessTask implements Handler.Callback {
         this.mSourceBitmap = sourceBitmap;
     }
 
-    public Bitmap getSourceBitmap(Bitmap lastBitmap) {
-        if(mBaseTask == null) {
-            return mSourceBitmap;
-        }
-        if(lastBitmap != null && mResultBitmap != null && lastBitmap != mResultBitmap) {
-            mResultBitmap = doRun(mSourceBitmap);
-            return mResultBitmap;
-        }
-        if(mResultBitmap != null) {
-            return mResultBitmap;
-        }
-        if(mBaseTask.getClass().getSimpleName().equals(this.getClass().getSimpleName())) {
-            return mSourceBitmap;
-        }
-
-        Bitmap sourceBitmap = mBaseTask.getSourceBitmap(lastBitmap);
-        return sourceBitmap;
+    public Bitmap getSourceBitmap() {
+        return mSourceBitmap;
     }
 
 

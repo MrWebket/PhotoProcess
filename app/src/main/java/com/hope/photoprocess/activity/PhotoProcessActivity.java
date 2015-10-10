@@ -210,10 +210,9 @@ public class PhotoProcessActivity extends BaseFragmentActivity implements PhotoP
             if(mBrightnessFragment != null) {
                 mBrightnessFragment.resetCurrentProgress();
             }
+            mProcessImage.setImageBitmap(getBitmap());
 
             mCameraManager.setProcessSourceBitmap(mCurrentBitmap);
-
-            mProcessImage.setImageBitmap(getBitmap());
         } else if(fragment instanceof PhotoProcessAdjustmentFragment && mAdjustmentFragment != null) { //调整
             int tab = Integer.parseInt(String.valueOf(result[0]));
 

@@ -33,7 +33,6 @@ public class PhotoProcessFilterAdapter extends BaseAbsAdapter<GPUEntity> {
     }
 
     public void setBitmap(Bitmap bitmap) {
-
         this.bitmap = Bitmap.createScaledBitmap(bitmap, DisplayUtil.dip2px(mContext, 30),
                 DisplayUtil.dip2px(mContext, 60), true);
         if (this.bitmap == bitmap) {

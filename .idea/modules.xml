@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Gpu-Image/Gpu-Image.iml" filepath="$PROJECT_DIR$/Gpu-Image/Gpu-Image.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/github_PhotoProce.iml" filepath="$PROJECT_DIR$/github_PhotoProce.iml" />
+      <module fileurl="file://$PROJECT_DIR$/inlifelibrary/inlifelibrary.iml" filepath="$PROJECT_DIR$/inlifelibrary/inlifelibrary.iml" />
+    </modules>
+  </component>
+</project>
